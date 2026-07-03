@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>画像と概要のドキュメント</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #ffffff;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            color: #333333;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 20pt;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .image-container {
+            width: 100%;
+            margin-bottom: 25px;
+            background-color: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        /* アスペクト比 2387:1239 (約 1.926:1) を維持するためのプレースホルダー設定
+           WeasyPrintなどのPDF変換やブラウザ表示で枠を綺麗に保つためのスタイリング
+        */
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2387 / 1239;
+            display: block;
+            object-fit: cover;
+        }
+        .caption {
+            font-size: 9pt;
+            color: #718096;
+            text-align: right;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        .content-section {
+            background-color: #fafbfc;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .content-section h2 {
+            font-size: 14pt;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .content-section p {
+            font-size: 10.5pt;
+            margin: 0 0 10px 0;
+        }
+        .content-section p:last-child {
+            margin-bottom: 0;
+        }
+        .meta-info {
+            margin-top: 40px;
+            font-size: 9pt;
+            color: #a0aec0;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>脱出おめでとう！！文字と日本語の変換表をあげるのでよかったら使ってみてね</h1>
+    </div>
+
+    <div class="image-container">
+        <img class="image-placeholder" src="aton.png" alt="指定サイズの画像（2387x1239）" width="2387" height="1239">
+    </div>
+
+     <div class="image-container">
+        <img class="image-placeholder" src="htow.png" alt="指定サイズの画像（2389x1242）" width="2389" height="1242">
+    </div>
+
+    <div class="image-container">
+        <img class="image-placeholder" src="gtop.png" alt="指定サイズの画像（2387x1239）" width="2387" height="1239">
+    </div>
+
+
+    <div class="content-section">
+        <h2>解説</h2>
+        <p>謎解きでは使いませんでしたが、促音や拗音、つまり「っ」や「ゃ」はそのまま「つ」や「や」で表し、長音、つまり「－」は省略します。</p>
+        <p>このことは謎解きを解いたみなさんはわかっているはずですが、この文字は右から左に書きます。日本語と違う言語体系というのを少しでも感じてほしいです</p>
+        <p>ここからは裏話ですが、今回用いた文字は未解読のインダス文字です。私が適当に日本語に割り振っただけなので悪しからず。ちなみに実際にインダス文字は右から読むことが明らかになっていて、一部には牛耕式もみられるそうです。それに対して文字の数が表音文字にしては多すぎるので表意文字または表音・表意文字だという考えが主流だそうです。
+    </div>
+
+    <div class="meta-info">
+        作成日: 2026年7月4日
+    </div>
+</div>
+
+</body>
+</html>
